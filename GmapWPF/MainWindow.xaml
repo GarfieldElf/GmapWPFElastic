@@ -1,0 +1,16 @@
+﻿<Window x:Class="GmapWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GmapWPF" xmlns:gmap="clr-namespace:GMap.NET.WindowsPresentation;assembly=GMap.NET.WindowsPresentation"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <gmap:GMapControl x:Name="gmapControl" 
+                          HorizontalAlignment="Stretch" 
+                          VerticalAlignment="Stretch" MouseLeftButtonDown="gmapControl_MouseLeftButtonDown" MouseMove="gmapControl_MouseMove" MouseLeftButtonUp="gmapControl_MouseLeftButtonUp" />
+        <Button Content="Son Noktayı Kaldır" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10" Width="150" Click="RemoveLastPoint_Click"/>
+        <Button Content="Gönder" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10,50,10,0" Width="150" Click="ListPoints_Click"/>
+    </Grid>
+</Window>
